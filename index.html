@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript</title>
+</head>
+<body>
+    
+    <header>
+    	<div class="container">
+    		<h1 class="text-center">Electricity Bill</h1>
+    	</div>
+    </header>
+
+
+
+
+
+
+
+	<script>
+
+
+
+		var units =233;
+
+        if(units<=50){
+        	var subtotal = units*0.50;
+        }
+        else if(units>50 && units<=150){
+        	var subtotal = 50*0.50+(units-50)*0.75;
+        }
+        else if(units>150 && units<=250){
+        	var subtotal = 50*0.50+100*0.75+ (units-150)*1.20;
+        }
+        else if(units>250){
+        	var subtotal = 50*0.50+100*0.75+100*1.20+(units-250)*1.50;
+        }
+
+        var vat=(subtotal*0.2);
+
+        var total= parseInt(subtotal+vat);
+
+
+        document.write("Vat: " + vat +"<br>");
+        document.write("Subtotal: " + subtotal +"<br>");
+        document.write("Total: " + total);
+
+	</script>
+	
+</body>
+</html>
